@@ -27,5 +27,10 @@
     "vite": "^2.9.9"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/irenealcaine/CurriculumVitae.git"
+  },
+  "homepage": "https://https://github.com/irenealcaine/CurriculumVitae#readme"
 }
