@@ -34,5 +34,8 @@
     "type": "git",
     "url": "git+https://https://github.com/irenealcaine/CurriculumVitae.git"
   },
-  "homepage": "https://https://github.com/irenealcaine/CurriculumVitae#readme"
+  "homepage": "https://https://github.com/irenealcaine/CurriculumVitae#readme",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
 }

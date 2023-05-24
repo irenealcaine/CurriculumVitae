@@ -1,13 +1,37 @@
+:root {
+  --black: #1c1917;
+  --white: #f4f4f5;
+  --blue: #1d4ed8;
+  --pink: #a21caf;
+
+  --transparent-blue: #1d4ed844;
+  --transparent-pink: #a21caf44;
+}
+
 * {
   margin: 0;
 }
 
 body {
-  background-color: #222;
-  color: #eee;
+  background-color: var(--black);
+  color: var(--white);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+body.dark {
+  background-color: var(--white);
+  color: var(--dark);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.iconUp{
+  width: 25px;
+  height: 25px;
+  margin: 4px;
+  filter: invert(1);
+  position: absolute;
+  top:0;
+  right:0;
+}
 .cv {
   border-radius: 20px;
   display: flex;
@@ -16,6 +40,7 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: auto;
+  
 }
 
 .header {
@@ -46,14 +71,18 @@ h1::before {
   left: 0;
   height: 5px;
   border-radius: 2px;
-  background: linear-gradient(to left, #00f8, #f0f8);
+  background: linear-gradient(to left, var(--blue), var(--pink));
 }
 
 h3 {
   font-size: 24px;
-  border-bottom: 1px dashed #eee;
+  border-bottom: 1px dashed var(--white);
   font-style: italic;
   margin-bottom: 10px;
+}
+
+.dark h3{
+  border-bottom: 1px dashed var(--black);
 }
 
 h3::before {
@@ -67,19 +96,17 @@ h3::before {
   border-radius: 20px;
   max-width: 700px;
   min-width: 300px;
-  border: 2px solid #00fa;
-  background: #00f2;
+  border: 2px solid var(--blue);
+  background: var(--transparent-blue);
+  text-align: justify;
 }
 
-.photo {
-  /* width: 140px; */
-}
 
 .photo img {
   width: 180px;
   border-radius: 10px;
   margin: 1rem;
-  box-shadow: 10px 10px 0 #f0f3, -10px -10px 0 #00f3;
+  box-shadow: 10px 10px 0 var(--transparent-pink), -10px -10px 0 var(--transparent-blue);
 }
 
 .main {
@@ -101,7 +128,7 @@ h3::before {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
 }
 
 .mail,
@@ -119,22 +146,19 @@ a {
   width: 25px;
   height: 25px;
   margin: 4px;
-  filter: invert();
+  filter: invert(1);
 }
-
-.languages {
-}
-
-.aditionalInfo {
+.dark .icon{
+  filter: invert(0);
 }
 
 .chicha {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid #f0fa;
+  border-left: 2px solid var(--pink);
   padding: 1rem;
   gap: 1rem;
-  background: #f0f2;
+  background: var(--transparent-pink);
   border-radius: 0 10px 10px 0;
 
   /* flex-wrap: wrap; */
@@ -142,18 +166,6 @@ a {
   /* min-width: 300px; */
 }
 
-.experience {
-}
-
-.containerExperience {
-
-}
-
-.formation {
-}
-
-.curses {
-}
 
 @media (max-width: 768px) {
   .header {
